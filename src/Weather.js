@@ -2,7 +2,7 @@ import React, { useState} from "react";
 import axios from "axios";
 import "./Weather.css";
 
-export default function weather(props) {
+export default function Weather(props) {
     const [weatherData, setweatherData] = useState({ ready: false });
     function handleResponse(response) {
         console.log(response.data);
@@ -16,7 +16,7 @@ export default function weather(props) {
             wind: response.data.main.wind.speed,
             city: response.data.name
         });
-        setReady(true);
+
     }
 
     if (weatherData.ready){
